@@ -9,10 +9,11 @@
 int main(void)
 {
 	/* here is my code */
-	char x[] = "abcdefghijklmnopqrstuvwxyz";
-	int i;
+	char x;
 
-	for (i = 0; i < 27; i++)
+	for (x = 'a'; x <= 'z'; x++)
+
 	putchar(x);
+	putchar('\n');
 	return (0);
 }
