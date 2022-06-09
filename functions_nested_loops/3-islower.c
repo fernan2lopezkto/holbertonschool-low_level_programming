@@ -1,16 +1,14 @@
 #include "main.h"
 /**
- * _islower - print alphabet 10 times
- *
- * return: void
+ * _islower -test lower
+ * @c: is te parameter of main.c
+ * Return: void
  */
-int _islower(int c);
+int _islower(int c)
 {
-	int c;
 
-	if (97 < c < 122)
-	return (1);
+	if ('97' < c && c < '122')
+		return (1);
 
-	else
 	return (0);
 }
