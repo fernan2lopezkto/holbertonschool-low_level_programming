@@ -1,9 +1,10 @@
+#include "main.h"
 /**
  * main - check the code
  *
  * Return: Always 0.
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {
 	char x;
 
@@ -11,5 +12,4 @@ int print_alphabet(void)
 
 	_putchar(x);
 	_putchar('\n');
-	return (0);
 }
