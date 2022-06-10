@@ -1,12 +1,11 @@
 #include "main.h"
 /**
-  * print_sign -test sign
-  * @n: is te parameter of main.c
-  * Return: void
+  * _abs -test sign
+  *
+  * Return: int
   */
-int _abs(int)
+int _abs(int m)
 {
-	int m;
 	if (m >= 0)
 		return (m);
 
