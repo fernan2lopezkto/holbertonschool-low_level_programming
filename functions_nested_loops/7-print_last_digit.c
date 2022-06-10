@@ -1,13 +1,17 @@
 #include "main.h"
 /**
   * print_last_digit -test sign
-  * @d: is th abs parameter from main
+  * @s: is th abs parameter from main
   * Return: int
   */
-int print_last_digit(int d)
+int print_last_digit(int s)
 {
-	int s;
+	int x = s % 10;
 
-	s = d % 10;
-	return (s & s);
+	if (s < 0)
+	{
+		x = (-x);
+	}
+	_putchar(x + '0');
+	return (x);
 }
