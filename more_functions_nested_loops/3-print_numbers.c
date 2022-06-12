@@ -1,9 +1,7 @@
 #include "main.h"
 
 /**
- * mul -funcion que detecta mayuscula
- * @a : to multiplicate parameter
- * @b : multiplicator parameter
+ * prin_numbers -funcion que detecta mayuscula
  *
  * Return: int
  */
