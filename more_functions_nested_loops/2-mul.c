@@ -2,7 +2,8 @@
 
 /**
  * mul -funcion que detecta mayuscula
- * @a, @b : are the parameters
+ * @a : to multiplicate parameter
+ * @b : multiplicator parameter
  *
  * Return: int
  */
