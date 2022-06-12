@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * prin_numbers -funcion que detecta mayuscula
+ * print_numbers -funcion que detecta mayuscula
  *
  * Return: int
  */
