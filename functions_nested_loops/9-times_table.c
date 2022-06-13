@@ -1,9 +1,7 @@
 #include "main.h"
 /**
-  * jack_bauer - test sign
+  * times_table - test sign
   */
-
-
 void times_table(void)
 {
 	int h, m, s;
