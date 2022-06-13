@@ -1,5 +1,8 @@
 #include "main.h"
-
+/**
+ * print_diagonal - print a diagonal with the backslash
+ * @n: is line long
+ */
 
 void print_diagonal(int n)
 {
@@ -17,6 +20,9 @@ void print_diagonal(int n)
 			_putchar('\n');
 		}
 	}
-	_putchar('\n');
+	else
+	{
+		_putchar('\n');
+	}
 
 }
