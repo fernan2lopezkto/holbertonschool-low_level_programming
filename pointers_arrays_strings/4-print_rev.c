@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * print_rev - print string
+ *@s: string
+ */
+
 void print_rev(char *s)
 {
 	int m = 0;
