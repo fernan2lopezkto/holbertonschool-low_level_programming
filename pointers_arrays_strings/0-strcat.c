@@ -24,6 +24,12 @@ char *_strcat(char *dest, char *src)
 	return (dest);
 }
 
+
+/**
+ * _strlen - funtion for concaten strings
+ *@s: is string from main
+ * Return: int
+ */
 int _strlen(char *s)
 {
 	int i = 0;
