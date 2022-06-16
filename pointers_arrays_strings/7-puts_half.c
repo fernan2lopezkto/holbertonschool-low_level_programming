@@ -13,12 +13,12 @@ void puts_half(char *str)
 
 	n = size / 2;/*in this variable save the midle of string*/
 
-	while (n <= size)
+	if (size % 2 != 0)/*here detect a impar strings*/
 	{
-		if (size % 2 != 0)
-		{
-			n++;
-		}
+		n++;
+	}
+	while (n < size)
+	{
 		_putchar(str[n]);
 		n++;
 	}
