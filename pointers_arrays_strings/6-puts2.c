@@ -14,10 +14,8 @@ void puts2(char *str)
 		{
 			_putchar(str[size]);
 		}
-		size++;
-/**
- * incremente de a uno para evitar saltear el caracter nulo
- */
+		size++;/* incremente de a uno para evitar saltear el caracter nulo */
 	}
+	_putchar('\n');
 }
 
