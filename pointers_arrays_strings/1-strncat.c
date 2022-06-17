@@ -11,10 +11,10 @@ int _strlen(char *s);
  */
 char *_strncat(char *dest, char *src, int n)
 {
-        int tdest, tsrc, s = 0;
+	int tdest, tsrc, s = 0;
 
-        tdest = _strlen(dest);
-        tsrc = _strlen(src);
+	tdest = _strlen(dest);
+	tsrc = _strlen(src);
 
 	if (tsrc < n)
 		n = tsrc;
@@ -24,7 +24,7 @@ char *_strncat(char *dest, char *src, int n)
 		tdest++;
 		s++;
 	}
-        return (dest);
+	return (dest);
 }
 
 
@@ -35,12 +35,12 @@ char *_strncat(char *dest, char *src, int n)
  */
 int _strlen(char *s)
 {
-        int i = 0;
+	int i = 0;
 
-        while (*s != '\0')
-        {
-                i++;
-                s++;
-        }
-        return (i);
+	while (*s != '\0')
+	{
+		i++;
+		s++;
+	}
+	return (i);
 }
