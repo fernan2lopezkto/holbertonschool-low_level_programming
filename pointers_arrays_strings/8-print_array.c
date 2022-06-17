@@ -12,7 +12,7 @@ void print_array(int *a, int n)
 
 	for (i = 0; i < n; i++)
 	{
-		if (i != n - 1)/*quitarle coma y espacio al ultimo numero*/
+		if (i < n - 1)/*quitarle coma y espacio al ultimo numero*/
 		{
 			printf("%d, ", a[i]);
 		}
