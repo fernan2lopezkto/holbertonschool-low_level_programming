@@ -3,7 +3,7 @@
 int _strlen(char *s);
 
 /**
- * *_strcat - funtion for concaten strings
+ **_strcat - funtion for concaten strings
  *@dest: is where save the copy
  *@src: is the strin to add in @dest
  *@n: number of character to copy
