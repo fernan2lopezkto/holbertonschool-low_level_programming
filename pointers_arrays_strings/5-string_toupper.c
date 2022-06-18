@@ -11,7 +11,7 @@ char *string_toupper(char *s)
 
 	while (*s != '\0')
 	{
-		if (*s > 97 && *s < 122)/*segment lowercase*/
+		if (*s >= 97 && *s < 122)/*segment lowercase*/
 		{
 			*s = *s - 32;
 		}
