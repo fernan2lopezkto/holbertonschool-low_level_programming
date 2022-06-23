@@ -18,13 +18,15 @@ char *_strdup(char *str)
 		return (NULL);
 
 	size = strlen(str);
-	size--;
-	pr = malloc(size * sizeof(char));/*make array*/
+	if (size == 0)
+	{
+		return (0);
+	}
 
-	if (pr == NULL)
-		return (NULL);
+	pr = malloc(size * sizeof(char));/*make array*/
 
 	for (ran = 0; ran < size; ran++)/*copying the array*/
 		pr[ran] = str[ran];
+
 	return (pr);/*return inicial pointer*/
 }
