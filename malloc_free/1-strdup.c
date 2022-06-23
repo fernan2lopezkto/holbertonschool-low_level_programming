@@ -18,10 +18,6 @@ char *_strdup(char *str)
 		return (NULL);
 
 	size = strlen(str);
-	if (size == 0)
-	{
-		return (0);
-	}
 
 	pr = malloc(size * sizeof(char));/*make array*/
 
