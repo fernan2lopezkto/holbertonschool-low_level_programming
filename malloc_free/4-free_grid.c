@@ -2,9 +2,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-void free_grid(int **p, int h)
+
+/**
+ *free_grid - function to free preebious malloc
+ *@grid: is the poiter to prebious malloc
+ *@height: is the previous pointer array long
+ *Return: void
+ */
+void free_grid(int **grid, int height)
 {
-	for(h--; h != 0; h--)
-		free(p[h]);
-	free(p);
+	for (; height >= 0; height--)
+		free(grid[height]);
+	free(grid);
 }
