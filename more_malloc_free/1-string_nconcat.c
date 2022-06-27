@@ -11,24 +11,25 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *pr;
-	unsigned int  size2, i, j;
+	unsigned int size1,  size2, i, j;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
+	size1 = strlen(s1);
 	size2 = strlen(s2);
-	if (n >= size2)
+	if (n > size2)
 		n = size2;
 
-	pr = malloc((strlen(s1) + size2 + 1) * sizeof(char));
+	pr = malloc((size1 + size2 + 1) * sizeof(char));
 	if (pr == NULL)
 		return (NULL);
 
-	for (i = 0; i < strlen(s1); i++)
+	for (i = 0; i < size1; i++)
 		pr[i] = s1[i];
-	for (j = 0; j < size2; j++)
+	for (j = 0; j < n; j++)
 	{
 		pr[i] = s2[j];
 		i++;
