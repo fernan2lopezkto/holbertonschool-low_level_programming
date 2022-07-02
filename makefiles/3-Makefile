@@ -6,9 +6,9 @@ NAME = school
 
 ###########################################
 
-RM = rm -f $(OBJ)
-CLEAN = rm -f *~ $(NAME)
-OCLEAN = rm -f $(OBJ)
+RM = rm -rf $(OBJ)
+CLEAN = rm -rf *~ $(NAME)
+OCLEAN = rm -rf $(OBJ)
 
 ############################################
 
@@ -23,16 +23,19 @@ preallschool : school.c
 
 #############################################
 
+.PHONY: clean
 clean :
-	$(CLEAN)
+	rm -rf *~ $(NAME)
 
+.PHONY: oclean
 oclean :
-	$(OCLEAN)
+	rm -rf $(OBJ)
 
+.PHONY: fclean
 fclean :
 	$(CLEAN)
 	$(OCLEAN)
-
+.PHONY: re
 re :
 	$(RM)
 	$(CC) -c -o main.o main.c
