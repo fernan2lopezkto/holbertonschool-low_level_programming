@@ -1,0 +1,39 @@
+############################################
+CC = gcc
+SRC = main.c school.c
+OBJ = school.o main.o
+NAME = school
+
+RM = rm -f $(OBJ)
+CLEAN = rm -f *~ $(NAME)
+OCLEAN = rm -f $(OBJ)
+FCLEAN = $(CLEAN) $(OCLEAN)
+
+############################################
+
+all : $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+
+
+
+
+CtoO1 : main.c
+	gcc -c -o main.o main.c
+
+CtoO2 : school.c
+	gcc -c -o school.o school.c
+
+
+clean :
+	$(CLEAN)
+
+oclean :
+	$(OCLEAN)
+
+fclean :
+	$(FCLEAN)
+
+re :
+	$(RM)
+	$(CC) $(OBJ) -o $(NAME)
