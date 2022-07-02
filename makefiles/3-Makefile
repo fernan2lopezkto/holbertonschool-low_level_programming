@@ -4,26 +4,24 @@ SRC = main.c school.c
 OBJ = school.o main.o
 NAME = school
 
+###########################################
+
 RM = rm -f $(OBJ)
 CLEAN = rm -f *~ $(NAME)
 OCLEAN = rm -f $(OBJ)
-FCLEAN = $(CLEAN) $(OCLEAN)
 
 ############################################
 
 all : $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
+preallmain : main.c
+	$(CC) -c -o main.o main.c
 
+preallschool : school.c
+	$(CC) -c -o school.o school.c
 
-
-
-CtoO1 : main.c
-	gcc -c -o main.o main.c
-
-CtoO2 : school.c
-	gcc -c -o school.o school.c
-
+#############################################
 
 clean :
 	$(CLEAN)
@@ -32,8 +30,13 @@ oclean :
 	$(OCLEAN)
 
 fclean :
-	$(FCLEAN)
+	$(CLEAN)
+	$(OCLEAN)
 
 re :
 	$(RM)
+	$(CC) -c -o main.o main.c
+	$(CC) -c -o school.o school.c
 	$(CC) $(OBJ) -o $(NAME)
+
+############################################
