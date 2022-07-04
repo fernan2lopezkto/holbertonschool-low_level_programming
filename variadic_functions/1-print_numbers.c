@@ -15,7 +15,7 @@ void print_numbers(const char *sep, const unsigned int n, ...)
 	if (sep == NULL)
 		sep = "";
 
-	if (n == 0)
+	if (n != 0)
 	{
 		va_start(p, n);
 
@@ -30,10 +30,9 @@ void print_numbers(const char *sep, const unsigned int n, ...)
 		va_end(p);
 	}
 	else
-		printf("\n",);
-
-		
-
+	{
+		printf("\n");
+	}
 }
 
 
