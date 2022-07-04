@@ -11,9 +11,9 @@ all : $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 main : main.c
-	$(CC) -c -o $(OBJ) $(SRC)
+	$(CC) -c $(OBJ) $(SRC)
 
 school : school.c
-	$(CC) -c -o $(OBJ) $(SRC)
+	$(CC) -c $(OBJ) $(SRC)
 
 
