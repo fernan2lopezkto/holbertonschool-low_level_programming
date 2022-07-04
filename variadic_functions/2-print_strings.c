@@ -2,7 +2,7 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 /**
- *print_string - function
+ *print_strings - function
  *@sep: string to print
  *@n: number of arguments
  *Return: void
