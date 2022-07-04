@@ -15,18 +15,25 @@ void print_numbers(const char *sep, const unsigned int n, ...)
 	if (sep == NULL)
 		sep = "";
 
-
-	va_start(p, n);
-
-	for (i = 0; i < n - 1; i++)
+	if (n == 0)
 	{
-		valor = va_arg(p, int);
-		printf("%d%s", valor, sep);
-	}
-	valor = va_arg(p, int);
-	printf("%d\n", valor);
+		va_start(p, n);
 
-	va_end(p);
+		for (i = 0; i < n - 1; i++)
+		{
+			valor = va_arg(p, int);
+			printf("%d%s", valor, sep);
+		}
+		valor = va_arg(p, int);
+		printf("%d\n", valor);
+
+		va_end(p);
+	}
+	else
+		printf("\n",);
+
+		
+
 }
 
 
