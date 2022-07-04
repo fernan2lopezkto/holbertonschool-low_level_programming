@@ -10,23 +10,23 @@
 void print_numbers(const char *sep, const unsigned int n, ...)
 {
 	unsigned int i, valor;
+	va_list p;
 
-	if (sep != NULL)
+	if (sep == NULL)
+		sep = "";
+
+
+	va_start(p, n);
+
+	for (i = 0; i < n - 1; i++)
 	{
-		va_list p;
-
-		va_start(p, n);
-
-		for (i = 0; i < n - 1; i++)
-		{
-			valor = va_arg(p, int);
-			printf("%d%s", valor, sep);
-		}
 		valor = va_arg(p, int);
-		printf("%d\n", valor);
-
-		va_end(p);
+		printf("%d%s", valor, sep);
 	}
+	valor = va_arg(p, int);
+	printf("%d\n", valor);
+
+	va_end(p);
 }
 
 
