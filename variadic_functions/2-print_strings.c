@@ -2,7 +2,7 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 /**
- *print_numbers - function
+ *print_string - function
  *@sep: string to print
  *@n: number of arguments
  *Return: void
@@ -29,7 +29,10 @@ void print_strings(const char *sep, const unsigned int n, ...)
 				printf("%s%s", v, sep);
 		}
 		v = va_arg(p, char *);
-		printf("%s\n", v);
+		if (v == NULL)
+			printf("(nil)\n");
+		else
+			printf("%s\n", v);
 
 		va_end(p);
 	}
