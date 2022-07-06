@@ -2,6 +2,11 @@
 #include "3-calc.h"
 #include <stdlib.h>
 #include <stdio.h>
+/**
+ * get_op_func - function that choise the correct function
+ * @s: char to compareoperator
+ * Return: int
+ */
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
@@ -14,7 +19,7 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int  i = 0;
 
-	while (i < 6)
+	while (ops[i].op != NULL)
 	{
 		if (*(ops[i].op) == *s)
 		{
