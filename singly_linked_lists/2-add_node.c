@@ -9,7 +9,7 @@ int _strlen(const char *s);
  *add_node - add node to start the list
  *@head: is the prebious node
  *@str: item in th prebious node
- *
+ *Return: int
  */
 list_t *add_node(list_t **head, const char *str)
 {
