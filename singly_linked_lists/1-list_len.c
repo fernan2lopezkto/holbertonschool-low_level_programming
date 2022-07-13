@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *print_list - print list items
+ *list_len - print list items
  *@h: nodo
  *Return: size_t
  */
