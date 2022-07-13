@@ -1,31 +1,30 @@
 #include <stdio.h>
 #include "lists.h"
+#include <stdlib.h>
+#include <string.h>
 
-int _strlen(char *s);
+int _strlen(const char *s);
 
 /**
  *add_node - add node to start the list
- *
- *
+ *@head: is the prebious node
+ *@str: item in th prebious node
  *
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new
+	list_t *new;
 
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 	{
 		return (NULL);
 	}
-	else
-	{
-
-	}
 	new->str = strdup(str);
 	new->len = _strlen(str);
-	new->next = head;
-	return(new);
+	new->next = *head;
+	*head = new;
+	return (new);
 }
 
 /**
@@ -33,7 +32,7 @@ list_t *add_node(list_t **head, const char *str)
  * @s: is the string to count
  * Return: int
  */
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int i = 0;
 
