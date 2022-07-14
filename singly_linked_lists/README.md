@@ -35,7 +35,7 @@ typedef struct list_s
 
 <h3> -> My code</h3>
 
-<A HREF="http:https://github.com/fernan2lopezkto/holbertonschool-low_level_programming/blob/master/singly_linked_lists/0-print_list.c">Click here for go to code</A>
+<a HREF="https://github.com/fernan2lopezkto/holbertonschool-low_level_programming/blob/master/singly_linked_lists/0-print_list.c" target="_blank">Click here for go to code</a>
 
 <h3> -> My function flowchart</h3>
 
