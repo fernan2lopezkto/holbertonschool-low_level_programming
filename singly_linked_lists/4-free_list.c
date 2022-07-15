@@ -4,17 +4,18 @@
 #include "lists.h"
 
 /**
- *
- *
- *
+ *free_list - free the list
+ *@head: list start
+ *Return:void
  */
 void free_list(list_t *head)
 {
-	list_t *rm = head;
+	if (head)
+		while (head->next)
+		{
+			free(head);
+			head = head->next;
+		}
 
-	while (rm->next)
-	{
-		free(rm);
-		rm = rm->next;
-	}
+	free(head);
 }
