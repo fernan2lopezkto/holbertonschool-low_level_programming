@@ -24,10 +24,15 @@ unsigned int binary_to_uint(const char *b)
 
 		while (stop >= 0)
 		{
-			stop--;
+			if (b[stop] != '0' && b[stop] != '1')
+			{
+				return (0);
+			}
 			if (b[stop] == 49)
-				bin = bin + pow_2(position);
+				bin = bin + pow_2(position)
+					;
 			position++;
+			stop--;
 
 		}
 			
