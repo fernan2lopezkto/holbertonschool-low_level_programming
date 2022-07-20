@@ -1,8 +1,6 @@
 #include "main.h"
 #include <stddef.h>
 
-unsigned int pow_2(unsigned int position);
-
 /**
  * binary_to_uint - function that converts a binary number to an unsigned int
  * @b:  is pointing to a string of 0 and 1 chars
@@ -10,49 +8,25 @@ unsigned int pow_2(unsigned int position);
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int bin = 0, position = 0;
-	int stop = 0;
-	
-	if (b == NULL)
-	{
+	unsigned int bit = 0, position;
+
+	if (!b)
 		return (0);
-	}
-	else
+
+	for (position = 0; b[position]; position++)
 	{
-		while (b[stop] != '\0')
-			stop++;
-
-		while (stop >= 0)
+		switch (b[position])
 		{
-			if (b[stop] != '0' && b[stop] != '1')
-			{
+			case '0':
+				bit = bit << 1;
+				break;
+			case '1':
+				bit = bit << 1;
+				bit = bit + 1;
+				break;
+			default:
 				return (0);
-			}
-			if (b[stop] == 49)
-				bin = bin + pow_2(position)
-					;
-			position++;
-			stop--;
-
 		}
-			
 	}
-
-	return (bin);
-}
-
-unsigned int pow_2(unsigned int position)
-{
-	unsigned int i, pow = 2;
-
-	if (position == 0)
-		return (1);
-
-	if (position == 1)
-		return (2);
-
-	for (i = 1; i < position; i++)
-		pow = pow * 2;
-
-	return (pow);
+	return (bit);
 }
