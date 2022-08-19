@@ -1,6 +1,4 @@
 #include "hash_tables.h"
-#include <stddef.h>
-#include <stdlib.h>
 
 /**
  * hash_table_create -  that creates a hash table
@@ -11,9 +9,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *ht;
 
-	ht = malloc(sizeof(void *) * size);
+	ht = malloc(sizeof(char *) * (size + 2));
 	if (!ht)
 		return (NULL);
+
 
 	return (ht);
 }

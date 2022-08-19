@@ -1,10 +1,19 @@
 #ifndef HASH_TABLES_H
 #define HASH_TABLES_H
 
+
+/*   ---INCLUDES---   */
+
+#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+
+
 /*   --- STRUCTS---   */
 
  /**
- * struct hash_node_s - Node of a hash table
+ * truct hash_node_s - Node of a hash table
  *
  * @key: The key, string
  * The key is unique in the HashTable
@@ -38,5 +47,6 @@ typedef struct hash_table_s
 hash_table_t *hash_table_create(unsigned long int size);
 
 
+/*       HELPERS      */
 
 #endif
