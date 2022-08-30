@@ -15,6 +15,7 @@ int binary_search(int *array, size_t size, int value)
 
 	if (!array || !value || !size)
 		return (-1);
+
 	printf("Searching in array: ");
 	print_array(array, size);
 
@@ -25,6 +26,10 @@ int binary_search(int *array, size_t size, int value)
 		if (value == array[mid])
 		{
 			return (mid);
+		}
+		else if (value == array[low])
+		{
+			return (array[low]);
 		}
 		else if (value > array[mid])
 		{
